@@ -3,7 +3,7 @@
 
   "name": "WUTemp",
   "description": "This extension shows the temperature of a Weather Underground station",
-  "version": "1.2",
+  "version": "1.3",
 
   "browser_action": {
   },

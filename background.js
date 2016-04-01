@@ -34,11 +34,17 @@ function doUpdate() {
 
 	
 	chrome.storage.sync.get({
-		PWS: 'KORPHILO1'
+		PWS: 'KORPHILO13',
+		ForC: 0
 	  }, function(items) {
 		var Station = items.PWS;
+		var ForC = items.ForC;
 	  
 		getTemp(Station,function(temp) {
+			if (ForC) {
+				temp = (temp-32)*5/9;
+			}
+			
 			var canvas = document.createElement('canvas');
 			canvas.width = 19;
 			canvas.height = 19;
@@ -85,7 +91,7 @@ startRequest()
 
 function OpenWUPage() {
 	chrome.storage.sync.get({
-		PWS: 'KORPHILO1'
+		PWS: 'KORPHILO13'
 	  }, function(items) {
 		var Station = items.PWS;
 		chrome.tabs.create({url: "http://www.wunderground.com/personal-weather-station/dashboard?ID=" + Station});
