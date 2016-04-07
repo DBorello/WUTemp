@@ -46,8 +46,8 @@ function doUpdate() {
 			}
 			
 			var canvas = document.createElement('canvas');
-			canvas.width = 38;
-			canvas.height = 38;
+			canvas.width = 19;
+			canvas.height = 19;
 
 			var context = canvas.getContext('2d');
 			context.font = "bold 10px Silkscreen";
